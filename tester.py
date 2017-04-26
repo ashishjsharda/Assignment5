@@ -15,7 +15,7 @@ COLLECTION_NAME = "businessCollection"
 CITY_TO_SEARCH = "tempe"
 MAX_DISTANCE = 100
 CATEGORIES_TO_SEARCH = ["Fashion", "Food", "Cafes"]
-MY_LOCATION = ["", ""] #[LATITUDE, LONGITUDE]
+MY_LOCATION = ["33.4291786", "-111.9090314"] #[LATITUDE, LONGITUDE] "33.4291786", "-111.9090314"
 SAVE_LOCATION_1 = "findBusinessBasedOnCity.txt"
 SAVE_LOCATION_2 = "findBusinessBasedOnLocation.txt"
 
@@ -52,6 +52,7 @@ if __name__ == '__main__':
         #Finding All Business name and address(full_address, city and state) present in radius of MY_LOCATION for CATEGORIES_TO_SEARCH
         print "Executing FindBusinessBasedOnLocation function"
         Assignment5.FindBusinessBasedOnLocation(CATEGORIES_TO_SEARCH, MY_LOCATION, MAX_DISTANCE, SAVE_LOCATION_2, collection)
+        collection.drop()
 
     except Exception as detail:
         print "Something bad has happened!!! This is the error ==> ", detail
